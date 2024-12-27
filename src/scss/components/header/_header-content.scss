@@ -1,0 +1,19 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__buttons {
+    @extend %container;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $gap;
+  }
+}

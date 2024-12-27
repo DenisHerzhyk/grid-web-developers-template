@@ -1,0 +1,79 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.about {
+  background-color: $color-gray-light;
+  @extend %section;
+  &__container {
+    @extend %container;
+    display: grid;
+    @include lg-min {
+      grid-template-columns: 1fr 271px;
+      gap: $gap-x5;
+    }
+    @include lg-md {
+      grid-template-columns: 1fr 255px;
+      gap: $gap-x3;
+    }
+    @include md-sm {
+      grid-template-columns: 1fr 175px;
+      gap: $gap-x2;
+    }
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: $gap-lg;
+    }
+  }
+  &__description {
+    position: relative;
+    @include sm-min {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        min-height: 60%;
+        background-color: rgba($color-gray, 0.2);
+        @include lg-min {
+          right: -$gap * 2.5;
+        }
+        @include lg-md {
+          right: -$gap * 1.8;
+        }
+        @include md-sm {
+          right: -$gap * 1.3;
+        }
+      }
+    }
+  }
+
+  &__pharagraph {
+    color: $color-gray;
+    text-align: justify;
+    line-height: 1.3rem;
+    letter-spacing: 0.055rem;
+    @include md-min {
+      font-size: $font-size-md;
+    }
+    @include md {
+      font-size: $font-size;
+    }
+  }
+  &__image {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    @include sm-min {
+      max-height: 488px;
+    }
+    @include sm {
+      max-height: 400px;
+    }
+  }
+  &__picture {
+    @include md-sm {
+      margin-top: 5rem;
+    }
+  }
+}

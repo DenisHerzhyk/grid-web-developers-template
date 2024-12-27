@@ -1,0 +1,53 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.subscribe {
+  background-color: $color-primary;
+  padding: 30px 0;
+
+  &__container {
+    @extend %container;
+  }
+  &__form {
+    display: grid;
+    gap: $gap;
+    justify-content: center;
+    align-items: center;
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "a1 a2 a3";
+    }
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "a1 a1" "a2 a3";
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "a1 a1" "a2 a2" "a3 a3";
+    }
+  }
+  &-item {
+    &__button {
+      &:hover {
+        background-color: $color-accent;
+        
+      }
+    }
+    @include lg-min {
+      font-size: $font-size-xmd;
+    }
+    @include lg-md {
+      font-size: $font-size;
+    }
+  }
+}
+
+.subscribe-item:nth-of-type(1) {
+  grid-area: a1;
+}
+.subscribe-item:nth-of-type(2) {
+  grid-area: a2;
+}
+.subscribe-item:nth-of-type(3) {
+  grid-area: a3;
+}

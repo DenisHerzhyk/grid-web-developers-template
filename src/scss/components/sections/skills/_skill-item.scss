@@ -1,0 +1,76 @@
+@use "../../../presets/" as *;
+@use "../../../mixins" as *;
+
+.skill-item {
+  position: relative;
+  overflow: hidden;
+
+  &__overlay {
+    @include abs-position;
+    background-color: rgba($color-primary, 0.8);
+    z-index: 2;
+  }
+  &__title:hover ~ &__image {
+    transform: scale(1.1);
+  }
+  &__title {
+    @include abs-position;
+    z-index: 3;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+    line-height: 23.44px;
+    font-weight: 700;
+    height: 100%;
+    padding: 20px;
+    transition: color 0.3s;
+    @include sm-min {
+      font-size: $font-size-xmd;
+    }
+    @include sm {
+      font-size: $font-size-md;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__image {
+    @include abs-position;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: transform 0.3s;
+    z-index: 1;
+  }
+}
+
+.skill-item:nth-of-type(1) {
+  grid-area: a1;
+}
+.skill-item:nth-of-type(2) {
+  grid-area: a2;
+}
+.skill-item:nth-of-type(3) {
+  grid-area: a3;
+}
+.skill-item:nth-of-type(4) {
+  grid-area: a4;
+}
+.skill-item:nth-of-type(5) {
+  grid-area: a5;
+}
+.skill-item:nth-of-type(6) {
+  grid-area: a6;
+}
+.skill-item:nth-of-type(7) {
+  grid-area: a7;
+}
+.skill-item:nth-of-type(8) {
+  grid-area: a8;
+}
+.skill-item:nth-of-type(9) {
+  grid-area: a9;
+}

@@ -1,0 +1,77 @@
+@use "../presets" as *;
+@use "sass:color";
+
+@mixin text-shortener {
+  display: block;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin bg-color($a: 0, $rgb: 0) {
+  background: rgba($rgb, $rgb, $rgb, $a);
+}
+
+@mixin block-header {
+  margin: 0;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid $color-dark;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+}
+
+@mixin unlist($m: 0, $p: 0) {
+  margin: $m;
+  padding: $p;
+
+  list-style: none;
+}
+
+@mixin abs-position($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin box-shadow {
+  box-shadow: -3px 3px 20px -10px color.adjust($color-gray-dark, $lightness: -40%);
+}
+
+@mixin btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $color-white;
+  letter-spacing: 0.1175rem;
+  line-height: 1.5181rem;
+  transition: background-color 0.3s;
+}
+
+@mixin input {
+  border: 2px solid transparent;
+  border-bottom-color: $color-gray;
+  background-color: rgba($color-white, 0.1);
+  color: $color-white;
+  letter-spacing: 0.1175rem;
+  line-height: 1.5181rem;
+  padding: 1px 30px;
+  height: 60px;
+  width: 100%;
+  transition: background-color 0.3s;
+}

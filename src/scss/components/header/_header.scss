@@ -1,0 +1,19 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header {
+  display: grid;
+  position: relative;
+  align-content: center;
+  min-height: 100vh;
+  background-color: $color-primary;
+  background-image: url("assets/images/img-header.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 150px 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,87 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  font-family: $font-main;
+  font-size: $font-size;
+}
+
+body {
+  background-color: $color-white;
+  color: $color-gray;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: $font-header;
+  color: $color-white;
+  font-size: $font-size-2xl;
+  font-weight: 300;
+  line-height: 4.9456rem;
+  letter-spacing: 0.3025rem;
+  margin-bottom: 3.2rem;
+  @include lg {
+    font-size: $font-size-xl;
+    margin-bottom: 1.5875rem;
+    letter-spacing: 0.2rem;
+  }
+  @include md {
+    font-size: $font-size-xlg;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.15rem;
+  }
+  @include sm {
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+h2 {
+  font-family: $font-header;
+  font-size: $font-size-xl;
+  color: $color-primary;
+  font-weight: 700;
+  line-height: 2.6rem;
+  letter-spacing: 0.25rem;
+  margin-bottom: 60px;
+  @include lg {
+    font-size: calc($font-size-xlg + 2px);
+    line-height: 2.2rem;
+  }
+  @include md {
+    font-size: $font-size-lg;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.15rem;
+  }
+}
+
+// h3 {
+// }
+
+a {
+  text-decoration: none;
+  color: $color-white;
+  transition: color 0.3s;
+}
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
