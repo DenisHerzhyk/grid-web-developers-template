@@ -1,12 +1,6 @@
 @use "../presets" as *;
 @use "../mixins" as *;
 
-// .footer__container,
-// .post__container,
-// .subscribe__container,{
-//   @extends
-// }
-
 .btn {
   &--primary {
     font-size: $font-size-md;

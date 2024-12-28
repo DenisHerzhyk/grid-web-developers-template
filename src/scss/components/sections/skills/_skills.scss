@@ -38,7 +38,7 @@ $local-height: 690px;
       gap: $gap;
     }
   }
-  &__button {
+  &__action {
     display: flex;
     justify-content: center;
     @include sm-min {
