@@ -7,12 +7,15 @@ $local-height: 690px;
 
 .skills {
   position: relative;
+
   &__container {
     margin-bottom: 1.25rem;
     display: grid;
-    @media ($local-height <= height) {
+
+    @media ($local-height <=height) {
       grid-auto-rows: calc(33.33333vh - $local-gap);
     }
+
     @media (height < $local-height) {
       grid-auto-rows: calc(230px - $local-gap);
     }
@@ -21,36 +24,45 @@ $local-height: 690px;
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     }
+
     @include lg-md {
-      grid-template-columns: repeat (3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     }
+
     @include md-sm {
-      grid-template-columns: repeat (2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
     }
+
     @include sm-min {
       gap: $gap-sm;
     }
+
     @include sm {
-      grid-template-columns: repeat (1, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
       gap: $gap;
     }
   }
+
   &__action {
     display: flex;
     justify-content: center;
+
     @include sm-min {
       margin-bottom: 1.875rem;
     }
+
     @include sm {
       margin-bottom: 0;
     }
   }
+
   @include sm-min {
     padding: $gap-sm;
   }
+
   @include sm {
     padding: $gap;
   }

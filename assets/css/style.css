@@ -215,9 +215,7 @@ ol{
   padding:0;
 }
 
-.btn--primary{
-  font-size:18px;
-  padding:0.5em 1em;
+.btn{
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -232,49 +230,17 @@ ol{
   line-height:1.5181rem;
   -webkit-transition:background-color 0.3s;
   transition:background-color 0.3s;
+  font-size:18px;
+  padding:0.5em 1em;
+}
+.btn--primary{
   background-color:rgba(45, 54, 81, 0.8);
   border:2px solid black;
 }
-.btn--primary:hover{
-  background-color:#d66926;
-}
 .btn--light{
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-align:center;
-      -ms-flex-align:center;
-          align-items:center;
-  -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
-  border:2px solid #ffffff;
-  letter-spacing:0.1175rem;
-  line-height:1.5181rem;
-  -webkit-transition:background-color 0.3s;
-  transition:background-color 0.3s;
-  font-size:18px;
-  padding:0.5em 1em;
   background-color:rgba(255, 255, 255, 0.1);
 }
-.btn--light:hover{
-  background-color:#d66926;
-}
 .btn--submit{
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-align:center;
-      -ms-flex-align:center;
-          align-items:center;
-  -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
-  border:2px solid #ffffff;
-  letter-spacing:0.1175rem;
-  line-height:1.5181rem;
-  -webkit-transition:background-color 0.3s;
-  transition:background-color 0.3s;
   border:2px solid transparent;
   border-bottom-color:#637588;
   background-color:rgba(255, 255, 255, 0.1);
@@ -284,8 +250,10 @@ ol{
   width:100%;
 }
 .btn--submit:hover{
-  background-color:#d66926;
   border:2px solid #ffffff;
+}
+.btn:hover{
+  background-color:#d66926;
 }
 
 .input{
@@ -932,7 +900,7 @@ ol{
     grid-template-areas:"a1 a1 a2" "a3 a4 a4" "a5 a5 a6";
   }
   .skills__container{
-    grid-template-columns:repeat 3, 1fr;
+    grid-template-columns:repeat(3, 1fr);
     grid-template-areas:"a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
 }
@@ -1014,7 +982,7 @@ ol{
     grid-template-areas:"a1 a2" "a3 a4" "a5 a6";
   }
   .skills__container{
-    grid-template-columns:repeat 2, 1fr;
+    grid-template-columns:repeat(2, 1fr);
     grid-template-areas:"a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
 }
@@ -1060,7 +1028,7 @@ ol{
     margin-bottom:0;
   }
   .skills__container{
-    grid-template-columns:repeat 1, 1fr;
+    grid-template-columns:repeat(1, 1fr);
     grid-template-areas:"a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     gap:20px;
   }

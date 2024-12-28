@@ -8,10 +8,12 @@
   right: 0;
   top: 0;
   z-index: 2;
+
   @include md {
     @include box-shadow;
     background-color: rgba(68, 89, 110, 0.25);
   }
+
   &__container {
     @extend %container;
     display: grid;

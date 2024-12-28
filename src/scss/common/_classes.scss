@@ -2,10 +2,13 @@
 @use "../mixins" as *;
 
 .btn {
+  @include btn;
+  font-size: $font-size-md;
+  padding: 0.5em 1em;
+
+
+
   &--primary {
-    font-size: $font-size-md;
-    padding: 0.5em 1em;
-    @include btn;
     background-color: rgba($color-primary, 0.8);
     border: 2px solid black;
 
@@ -13,35 +16,31 @@
       min-width: 350px;
       min-height: 60px;
     }
+
     @include sm {
       width: 100%;
       min-height: 60px;
     }
-    &:hover {
-      background-color: $color-accent;
-    }
   }
+
   &--light {
-    @include btn;
-    font-size: $font-size-md;
-    padding: 0.5em 1em;
     background-color: rgba($color-white, 0.1);
+
     @include lg-min {
       padding: 1rem 4.2725rem;
     }
+
     @include lg {
       font-size: $font-size;
       padding: 0.65rem 3.03rem;
     }
+
     @include md {
       padding: 0.4rem 2.1rem;
     }
-    &:hover {
-      background-color: $color-accent;
-    }
   }
+
   &--submit {
-    @include btn;
     border: 2px solid transparent;
     border-bottom-color: $color-gray;
     background-color: rgba($color-white, 0.1);
@@ -49,21 +48,28 @@
     padding: 1px 30px;
     height: 60px;
     width: 100%;
+
     @include lg-min {
       font-size: $font-size-xmd;
     }
+
     @include lg-md {
       font-size: $font-size;
     }
+
     &:hover {
-      background-color: $color-accent;
       border: 2px solid $color-white;
     }
+  }
+
+  &:hover {
+    background-color: $color-accent;
   }
 }
 
 .input {
   @include input;
+
   &::placeholder {
     color: $color-gray;
   }

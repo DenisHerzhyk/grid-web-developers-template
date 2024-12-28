@@ -4,11 +4,13 @@
 .footer {
   padding: 60px 0;
   background-color: $color-primary;
+
   &__container {
     @extend %container;
     display: flex;
     flex-direction: column;
   }
+
   &__socials {
     position: relative;
     display: flex;
@@ -16,6 +18,7 @@
     gap: $gap;
     font-size: 2.25rem;
     margin-bottom: 40px;
+
     &::after {
       content: "";
       display: block;
@@ -26,12 +29,15 @@
       height: 2px;
     }
   }
+
   &__link {
     transition: color 0.3s;
+
     &:hover {
       color: $color-accent;
     }
   }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -44,6 +50,7 @@
       line-height: 1.25rem;
       margin-bottom: 3px;
     }
+
     &-second {
       display: flex;
       justify-content: center;
